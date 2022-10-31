@@ -2,12 +2,8 @@ import groovy.lang.MissingPropertyException
 
 pluginManagement {
     repositories {
-        // Default repositories
-        gradlePluginPortal()
-        mavenCentral()
-
         // Repositories
-        maven("https://maven.unifycraft.xyz/releases")
+        maven("https://maven.enhancedpixel.xyz/releases")
         maven("https://maven.fabricmc.net")
         maven("https://maven.architectury.dev/")
         maven("https://maven.minecraftforge.net")
@@ -16,9 +12,12 @@ pluginManagement {
         maven("https://jitpack.io/")
 
         // Snapshots
-        maven("https://maven.unifycraft.xyz/snapshots")
-        maven("https://s01.oss.sonatype.org/content/groups/public/")
+        maven("https://maven.enhancedpixel.xyz/snapshots")
         mavenLocal()
+
+        // Default repositories
+        gradlePluginPortal()
+        mavenCentral()
     }
 
     plugins {
@@ -26,8 +25,8 @@ pluginManagement {
         kotlin("jvm") version(kotlin)
         kotlin("plugin.serialization") version(kotlin)
 
-        val ucgt = "1.11.0"
-        id("xyz.unifycraft.gradle.multiversion-root") version(ucgt)
+        val ucgt = "1.12.4"
+        id("xyz.enhancedpixel.gradle.multiversion-root") version(ucgt)
     }
 }
 

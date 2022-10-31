@@ -1,20 +1,12 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import com.modrinth.minotaur.dependencies.ModDependency
-import com.modrinth.minotaur.dependencies.DependencyType
-import xyz.unifycraft.gradle.utils.GameSide
-import xyz.unifycraft.gradle.tools.CurseDependency
 
 plugins {
     java
     kotlin("jvm")
     kotlin("plugin.serialization")
-    id("xyz.unifycraft.gradle.multiversion")
-    id("xyz.unifycraft.gradle.tools")
-    id("xyz.unifycraft.gradle.tools.loom")
-}
-
-loomHelper {
-    disableRunConfigs(GameSide.SERVER)
+    id("xyz.enhancedpixel.gradle.multiversion")
+    id("xyz.enhancedpixel.gradle.tools")
+    id("xyz.enhancedpixel.gradle.tools.loom")
 }
 
 repositories {
