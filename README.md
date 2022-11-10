@@ -17,10 +17,11 @@ support.
 <center>
 
 **This project is licensed under [LGPL-3.0][lgpl]**\
-**&copy; 2022 Deftu**
+**&copy; 2022 [Deftu][deftu]**
 
 </center>
 </div>
 
 [fwiki]: https://fabricmc.net/wiki
 [lgpl]: https://www.gnu.org/licenses/lgpl-3.0.en.html
+[deftu]: https://deftu.xyz/
