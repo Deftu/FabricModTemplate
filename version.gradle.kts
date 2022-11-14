@@ -3,9 +3,9 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     java
     kotlin("jvm")
-    id("xyz.enhancedpixel.gradle.multiversion")
-    id("xyz.enhancedpixel.gradle.tools")
-    id("xyz.enhancedpixel.gradle.tools.loom")
+    id("xyz.deftu.gradle.multiversion")
+    id("xyz.deftu.gradle.tools")
+    id("xyz.deftu.gradle.tools.loom")
 }
 
 repositories {
@@ -29,16 +29,4 @@ dependencies {
         11802 -> "3.2.3"
         else -> throw IllegalStateException("Invalid MC version: ${mcData.version}")
     }}")
-}
-
-tasks {
-    withType<KotlinCompile> {
-        kotlinOptions {
-            freeCompilerArgs += "-Xjvm-default=enable"
-        }
-    }
-
-    remapJar {
-        archiveBaseName.set("${modData.name}-${mcData.versionStr}")
-    }
 }
